@@ -8,29 +8,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Demarlé Julianna">
-    <!-- wtf is this ju??? 
-    <meta http-equiv="refresh" content="3"> 
-    -->
+
     <link rel="stylesheet" href="style.css">
     <title>Homepage</title>
+
 </head>
 <body>
-    <div id="homepage_header"><h1>Rate The Food</h1>
-        <?php 
+    <div id="homepage_header"><h1>Rate The Food</h1></div>
+
+        <div id="homepage_sign">
+            <?php 
             if(isset($_SESSION["user"]))
             {
                 $user = $_SESSION["user"]["Username"];
                 echo "boss, $user";
-                echo "<a href='logout.php'>SIGN OUTUTT</a>";
+                echo "<a href='logout.php' class='homepage_logout-a' style='position:absolute; top:200px; right:190px' >SIGN OUT</a>";
             } else {
-                echo "<a href='login.php'>LOG IN</a>";
-                echo "<a href='signup.php'>SIGN UP</a>";
+                echo "<a href='login.php' class='login'>LOG IN</a>";
+                echo "<a href='signup.php' class='signup'>SIGN UP</a>";
             }
             
         ?>
-
         
-    </div>
+        </div>
+
+    
     
     
 
