@@ -22,17 +22,18 @@
             {
                 $user = $_SESSION["user"]["Username"];
                 echo "boss, $user";
-                echo "<a href='logout.php' class='homepage_logout-a' style='position:absolute; top:200px; right:190px' >SIGN OUT</a>";
+                echo "<a href='logout.php' class='hmp_logout' style='position:absolute; top:200px; right:190px' >SIGN OUT</a>";
             } else {
-                echo "<a href='login.php' class='login'>LOG IN</a>";
-                echo "<a href='signup.php' class='signup'>SIGN UP</a>";
+                echo "<a href='login.php' class='hmp_login'>LOG IN</a>";
+                echo "<a href='signup.php' class='hmp_signup'>SIGN UP</a>";
             }
             
         ?>
         
         </div>
 
-    
+        <div class="hmp_seperator"></div>
+        <div class="hmp_field"></div>
     
     
 
@@ -47,7 +48,7 @@
                 
                 
             </div>
-            <img id="hmp_pic1" src="pictures/hmp_pasta.jpg" alt="big picture of two forks holding pasta">
+            <img id="hmp_pic1" src="pictures/hmp_pasta.png" alt="big picture of two forks holding pasta">
 
         </div>
     </div>
