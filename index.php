@@ -24,7 +24,7 @@
                 echo "<a href='logout.php'>SIGN OUTUTT</a>";
             } else {
                 echo "<a href='login.php'>LOG IN</a>";
-                echo "<a href='signUp.php'>SIGN UP</a>";
+                echo "<a href='signup.php'>SIGN UP</a>";
             }
             
         ?>
