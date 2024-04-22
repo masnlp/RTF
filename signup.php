@@ -12,7 +12,7 @@
 </head>
 <body>
 
-    <form action="signUp.php" method="post">
+    <form action="signup.php" method="post">
 
         <label for="Username">Username</label>
         <input type="text" name="Username" id="Username" placeholder="Username">
