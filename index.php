@@ -37,8 +37,30 @@
     
     
 
-    <!--Picture1-->
+    <!--Picture1
+        also all the foos from the table foos
+    -->
 
+    <?php 
+    
+        $db = mysqli_connect("eliasschinkinger.lima-db.de:3306", "USER436891_gaudi", "gAudI420!?", "db_436891_2");
+
+        $sql = "SELECT * FROM Foos";
+
+        $result = mysqli_query($db, $sql);
+
+        while($row = mysqli_fetch_array($result)){
+            $foodName = $row['FoodName'];
+            $pathToPic = $row['pachToPic'];
+
+            echo $foodName. $row['Nationality'];
+            //get the correct path elias u dumbo
+            echo "<img src=\"$pathToPic\" alt=\"Pic of $foodName\">";
+        }
+
+        mysqli_close($db);
+    ?>
+    <img src="$row['pachToPic']" alt="Pic of $row['FoodName']">
 
     <!--Food-Boxes start here-->
     
