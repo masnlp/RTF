@@ -50,21 +50,32 @@
         $result = mysqli_query($db, $sql);
 
         while($row = mysqli_fetch_array($result)){
+            $foodID = $row['FoodId'];
             $foodName = $row['FoodName'];
             $pathToPic = $row['PachToPic'];
 
             echo $foodName. " ". " from: ". $row['Nationality'];
 
-            
-            //get the correct path elias u dumbot
+            echo '<div>';
+            echo '    <form action="like.php" method="post">';
+            echo '        <input type="number" name="foodID" id="foodID" value="'.$foodID.'" hidden>';
+    
+            echo '        <input type="submit" value="like">';
+            echo '    </form>';
             echo "<img src=\"$pathToPic\" alt=\"Pic of $foodName\" style=\"width: 100px; height: 100px;\">";
+            echo '</div>';
 
             
         }
 
         mysqli_close($db);
     ?>
+
+
+    
     <!--Food-Boxes start here-->
+
+    
     
     <div class="homepage_container_fluid">
         <div class="homepage_container_list">
