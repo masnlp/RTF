@@ -51,17 +51,19 @@
 
         while($row = mysqli_fetch_array($result)){
             $foodName = $row['FoodName'];
-            $pathToPic = $row['pachToPic'];
+            $pathToPic = $row['PachToPic'];
 
-            echo $foodName. $row['Nationality'];
-            //get the correct path elias u dumbo
-            echo "<img src=\"$pathToPic\" alt=\"Pic of $foodName\">";
+            echo $foodName. " ". " from: ". $row['Nationality'];
+
+            
+            //get the correct path elias u dumbot
+            echo "<img src=\"$pathToPic\" alt=\"Pic of $foodName\" style=\"width: 100px; height: 100px;\">";
+
+            
         }
 
         mysqli_close($db);
     ?>
-    <img src="$row['pachToPic']" alt="Pic of $row['FoodName']">
-
     <!--Food-Boxes start here-->
     
     <div class="homepage_container_fluid">
