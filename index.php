@@ -87,5 +87,24 @@
 
         </div>
     </div>
+
+    <div id="errorMsges">
+        <?php
+            if(isset($_SESSION["error"]))
+            {
+                echo "<ul>";
+                foreach ($_SESSION["error"] as $key => $value) 
+                {
+                    echo "<li>";
+                    echo "$key => $value";
+                    echo "</li>";
+                }
+
+                echo "<ul>";
+            }
+
+            unset($_SESSION["error"]);
+        ?>
+    </div>
 </body>
 </html>
