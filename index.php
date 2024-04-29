@@ -38,7 +38,7 @@
 
     <?php 
     
-        $db = mysqli_connect("localhost", "root", "", "db_436891_2");
+        $db = mysqli_connect("eliasschinkinger.lima-db.de:3306", "USER436891_gaudi", "gAudI420!?", "db_436891_2");
 
         $sql = "SELECT * FROM Foos";
 
