@@ -14,8 +14,6 @@
 
 </head>
 <body>
-    <div id="homepage_header"><h1>Rate The Food</h1></div>
-
         <div id="homepage_sign">
             <?php 
             if(isset($_SESSION["user"]))
@@ -31,9 +29,6 @@
         ?>
         
         </div>
-
-        <div class="hmp_seperator"></div>
-        <div class="hmp_field"></div>
     
     
 
@@ -43,7 +38,7 @@
 
     <?php 
     
-        $db = mysqli_connect("eliasschinkinger.lima-db.de:3306", "USER436891_gaudi", "gAudI420!?", "db_436891_2");
+        $db = mysqli_connect("localhost", "root", "", "db_436891_2");
 
         $sql = "SELECT * FROM Foos";
 
@@ -54,7 +49,7 @@
             $foodName = $row['FoodName'];
             $pathToPic = $row['PachToPic'];
 
-            echo $foodName. " ". " from: ". $row['Nationality'];
+            echo "<div id='hmp_food_descrip'>" . $foodName. " ". " from: ". $row['Nationality'] . "</div>";
 
             echo '<div>';
             echo '    <form action="like.php" method="post">';
@@ -70,6 +65,7 @@
 
         mysqli_close($db);
     ?>
+    
 
 
     
@@ -83,7 +79,11 @@
                 
                 
             </div>
-            <img id="hmp_pic1" src="pictures/hmp_pasta.png" alt="big picture of two forks holding pasta">
+            <div class="hmp_pic1_and_searchbar">
+                <img id="hmp_pic1" src="pictures/hmp_pasta.png" alt="big picture of two forks holding pasta">
+                <input type="search" name="searchbar" id="hmp_searchbar" placeholder="Gib hier den Namen eines Gerichts ein...">
+            </div>
+            
 
         </div>
     </div>
