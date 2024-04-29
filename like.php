@@ -11,6 +11,9 @@
     $db = mysqli_connect("eliasschinkinger.lima-db.de:3306", "USER436891_gaudi", "gAudI420!?", "db_436891_2");
 
     $foodID = $_POST["foodID"];
+    
+    $likes = "SELECT Likes Foos Where foodID = $foodID";
+
     $userID = $_SESSION["user"] ["UserID"];
 
     $check = "SELECT FoodID FROM likedFood WHERE UserID = $userID";
@@ -32,8 +35,11 @@
     if(!$alreadyLiked)
     {
         $sql = "INSERT INTO `likedFood` (`FoodID`, `UserID`) VALUES ($foodID, $userID)";
+        $update = "UPDATE Foos SET Likes = ($likes) + 1 WHERE FoodID = $foodID";
 
         mysqli_query($db, $sql);
+        mysqli_query($db, $update);
+        
     }
 
 

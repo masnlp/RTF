@@ -22,7 +22,7 @@
     $result = mysqli_query($db, $sql);
 
     while($row = mysqli_fetch_array($result)){
-        $foodID = $row['FoodId'];
+        $foodID = $row['FoodID'];
         $foodName = $row['FoodName'];
         $pathToPic = $row['PachToPic'];
         $likes = $row['Likes'];
