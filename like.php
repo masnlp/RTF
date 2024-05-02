@@ -10,11 +10,13 @@
 
     $db = mysqli_connect("eliasschinkinger.lima-db.de:3306", "USER436891_gaudi", "gAudI420!?", "db_436891_2");
 
+    $foodID = $_POST["foodID"];
+    $userID = $_SESSION["user"] ["UserID"];
+
     $likes  = "SELECT Likes Foos Where foodID = $foodID";
     $check  = "SELECT FoodID FROM likedFood WHERE UserID = $userID";
 
-    $foodID = $_POST["foodID"];
-    $userID = $_SESSION["user"] ["UserID"];
+
     
     $result = mysqli_query($db, $check);
 
