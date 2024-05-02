@@ -45,10 +45,10 @@
         $result = mysqli_query($db, $sql);
 
         while($row = mysqli_fetch_array($result)){
-            $foodID = $row['FoodId'];
-            $foodName = $row['FoodName'];
+            $foodID    = $row[ 'FoodId'  ];
+            $foodName  = $row['FoodName' ];
             $pathToPic = $row['PachToPic'];
-            $likes = $row['Likes'];
+            $likes     = $row[  'Likes'  ];
 
             echo "<div id='hmp_food_descrip'>" . $foodName. " ". " from: ". $row['Nationality'] . "</div>";
 

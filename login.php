@@ -44,6 +44,7 @@
             if (($user = mysqli_fetch_array($result)) != null) 
             {
                 $_SESSION["user"] = $user;
+                
                 header("Location: index.php");
             }
             

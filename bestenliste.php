@@ -17,23 +17,23 @@
     $result = mysqli_query($db, $sql);
 
     while($row = mysqli_fetch_array($result)){
-        $foodID = $row['FoodID'];
-        $foodName = $row['FoodName'];
+        $foodID    = $row[ 'FoodID'  ];
+        $foodName  = $row['FoodName' ];
         $pathToPic = $row['PachToPic'];
-        $likes = $row['Likes'];
+        $likes     = $row[  'Likes'  ];
+
         echo $foodName. " ". " from: ". $row['Nationality'];
 
+
         echo '<div>';
-        
         echo "<img src=\"$pathToPic\" alt=\"Pic of $foodName\" style=\"width: 100px; height: 100px;\">";
         echo "Likes: ".$likes;
-
         echo '</div>';
 
-    
     }
 
     mysqli_close($db);
+    
     ?>
 
 </body>
