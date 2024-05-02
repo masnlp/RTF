@@ -48,6 +48,7 @@
             $foodID = $row['FoodId'];
             $foodName = $row['FoodName'];
             $pathToPic = $row['PachToPic'];
+            $likes = $row['Likes'];
 
             echo "<div id='hmp_food_descrip'>" . $foodName. " ". " from: ". $row['Nationality'] . "</div>";
 
@@ -55,7 +56,7 @@
             echo '    <form action="like.php" method="post">';
             echo '        <input type="number" name="foodID" id="foodID" value="'.$foodID.'" hidden>';
     
-            echo '        <input type="submit" value="like">';
+            echo '        <input type="submit" value="like"> '. $likes;
             echo '    </form>';
             echo "<img src=\"$pathToPic\" alt=\"Pic of $foodName\" style=\"width: 100px; height: 100px;\">";
             echo '</div>';

@@ -12,12 +12,7 @@
     
     $db = mysqli_connect("eliasschinkinger.lima-db.de:3306", "USER436891_gaudi", "gAudI420!?", "db_436891_2");
 
-    $sql = "SELECT f.FoodID, f.FoodName, f.Nationality, f.PachToPic, COUNT(lf.UserID) AS Likes
-            FROM Foos AS f
-            INNER JOIN likedFood AS lf
-            ON f.FoodId = lf.FoodID
-            GROUP BY lf.FoodID
-            ORDER BY COUNT(lf.UserID) DESC;";
+    $sql = "SELECT FoodID, FoodName, Nationality, PachToPic, Likes FROM Foos";
 
     $result = mysqli_query($db, $sql);
 
