@@ -1,5 +1,25 @@
 <?php
     session_start();
+
+    function showItems($result){
+        while($row = mysqli_fetch_array($result)){
+            $foodID    = $row[ 'FoodId'  ];
+            $foodName  = $row['FoodName' ];
+            $pathToPic = $row['PachToPic'];
+            $likes     = $row[  'Likes'  ];
+
+            echo "<div id='hmp_food_descrip'>" . $foodName. " ". " from: ". $row['Nationality'] . "</div>";
+
+            echo '<div>';
+            echo '    <form action="like.php" method="post">';
+            echo '        <input type="number" name="foodID" id="foodID" value="'.$foodID.'" hidden>';
+    
+            echo '        <input type="submit" value="like"> '. $likes;
+            echo '    </form>';
+            echo "<img src=\"$pathToPic\" alt=\"Pic of $foodName\" style=\"width: 100px; height: 100px;\">";
+            echo '</div>';
+        }
+    }
 ?>
 
 <!DOCTYPE html>
@@ -36,35 +56,26 @@
         also all the foos from the table foos
     -->
 
-    <?php 
-    
+    <?php
         $db = mysqli_connect("eliasschinkinger.lima-db.de:3306", "USER436891_gaudi", "gAudI420!?", "db_436891_2");
+        
+        if(isset($_POST["submit"])){
 
-        $sql = "SELECT * FROM Foos";
-
-        $result = mysqli_query($db, $sql);
-
-        while($row = mysqli_fetch_array($result)){
-            $foodID    = $row[ 'FoodId'  ];
-            $foodName  = $row['FoodName' ];
-            $pathToPic = $row['PachToPic'];
-            $likes     = $row[  'Likes'  ];
-
-            echo "<div id='hmp_food_descrip'>" . $foodName. " ". " from: ". $row['Nationality'] . "</div>";
-
-            echo '<div>';
-            echo '    <form action="like.php" method="post">';
-            echo '        <input type="number" name="foodID" id="foodID" value="'.$foodID.'" hidden>';
-    
-            echo '        <input type="submit" value="like"> '. $likes;
-            echo '    </form>';
-            echo "<img src=\"$pathToPic\" alt=\"Pic of $foodName\" style=\"width: 100px; height: 100px;\">";
-            echo '</div>';
-
+            $searchbar = $_POST["searchbar"];
             
+            $sqlSearch = "SELECT * FROM `Foos` WHERE FoodName LIKE '%$searchbar%'";
+            
+            $result = mysqli_query($db, $sqlSearch);
+            
+            
+        } else {
+            
+            $sql = "SELECT * FROM Foos";
+            
+            $result = mysqli_query($db, $sql);
         }
-
-        mysqli_close($db);
+        mysqli_close(  $db  );
+        showItems   ($result);
     ?>
     
 
@@ -79,10 +90,17 @@
             <div class="homepage_search">
                 
                 
-            </div>
-            <div class="hmp_pic1_and_searchbar">
-                <img id="hmp_pic1" src="pictures/hmp_pasta.png" alt="big picture of two forks holding pasta">
-                <input type="search" name="searchbar" id="hmp_searchbar" placeholder="Gib hier den Namen eines Gerichts ein...">
+                </div>
+                <div class="hmp_pic1_and_searchbar">
+                    <img id="hmp_pic1" src="pictures/hmp_pasta.png" alt="big picture of two forks holding pasta">
+                    <form action="index.php" method="post">
+                        <input type="search" name="searchbar" id="hmp_searchbar" placeholder="Gib hier den Namen eines Gerichts ein...">
+                        <input type="submit" name="submit" value="Suchen">
+                    </form>
+                    
+                
+                
+
             </div>
             
 
