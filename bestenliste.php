@@ -12,7 +12,7 @@
     
     $db = mysqli_connect("eliasschinkinger.lima-db.de:3306", "USER436891_gaudi", "gAudI420!?", "db_436891_2");
 
-    $sql = "SELECT FoodID, FoodName, Nationality, PachToPic, Likes FROM Foos";
+    $sql = "SELECT FoodID, FoodName, Nationality, PachToPic, Likes FROM Foos ORDER BY LIKES DESC";
 
     $result = mysqli_query($db, $sql);
 
