@@ -31,9 +31,12 @@
             $username = $_POST["Username"];
             $password = $_POST["Password"];
 
+            $passwordEnc = hash('sha256', $password);
+
+
             $db = mysqli_connect("eliasschinkinger.lima-db.de:3306", "USER436891_gaudi", "gAudI420!?", "db_436891_2");
 
-            $sql = "SELECT * FROM users WHERE (Username = '$username' OR EMail = '$username') AND Password = '$password'";
+            $sql = "SELECT * FROM users WHERE (Username = '$username' OR EMail = '$username') AND Password = '$passwordEnc'";
 
             $result = mysqli_query($db, $sql);
 

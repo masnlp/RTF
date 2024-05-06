@@ -35,11 +35,14 @@
             $email    = $_POST[  "Email" ];
             $password = $_POST["Password"];
 
+            $passwordEnc = hash('sha256', $password);
+
+
             $db = mysqli_connect("eliasschinkinger.lima-db.de:3306", "USER436891_gaudi", "gAudI420!?", "db_436891_2");
 
-            $sql = "INSERT INTO users (Username, EMail, Password) VALUES ('$username', '$email', '$password')";
+            $sql = "INSERT INTO users (Username, EMail, Password) VALUES ('$username', '$email', '$passwordEnc')";
 
-            $sql2 = "SELECT * FROM users WHERE (Username = '$username' OR EMail = '$username') AND Password = '$password'";
+            $sql2 = "SELECT * FROM users WHERE (Username = '$username' OR EMail = '$username') AND Password = '$passwordEnc'";
 
             mysqli_query($db, $sql);
 
