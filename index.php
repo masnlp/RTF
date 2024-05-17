@@ -98,9 +98,6 @@
                         <input type="submit" name="submit" value="Suchen">
                     </form>
                     
-                
-                
-
             </div>
             
 
