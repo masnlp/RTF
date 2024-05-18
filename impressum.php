@@ -27,7 +27,7 @@
 
                 echo "<a href='logout.php'>SIGN OUT</a>";
             } else {
-                echo "<a href='login.php'>LOG IN </a>";
+                echo "<a href='login.php' style='margin-right: 10px;'>LOG IN </a>";
                 echo "<a href='signup.php'>SIGN UP</a>";
             }
 
@@ -35,8 +35,8 @@
             </div>
 
             <div id="links">
-                <a href="index.php">GERICHTE</a>
-                <a href="bestenliste.php">BESTENLISTE</a>
+                <a href="index.php" style="margin-right: 10px;">GERICHTE</a>
+                <a href="bestenliste.php" style="margin-right: 10px;">BESTENLISTE</a>
                 <a href="#">IMPRESSUM</a>
             </div>
         </div>
