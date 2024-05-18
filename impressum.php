@@ -16,7 +16,7 @@
 <body>
     <header id="header">
         <div id="heading">
-            <h1>RTF - RateTheFood</h1>
+            <h1>RateTheFood</h1>
 
             <div id="loggin">
             <?php 

@@ -8,25 +8,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Elias Schinkinger">
+
+    <link rel="stylesheet" href="styleImp.css">
     <title>Sign Up</title>
 </head>
 <body>
+    
+    <header id="headerLog">
+        <h1 id="centered">RateTheFood</h1>
+    </header>
+
+    <div id="barLog"></div>
+
+    <div id="form">
 
     <form action="signup.php" method="post">
 
         <label for="Username">Username</label>
-        <input type="text" name="Username" id="Username" placeholder="Username">
+        <input type="text" name="Username" id="Username" placeholder="Username" required>
         <br>
         <label for="Email">Email</label>
-        <input type="email" name="Email" id="Email" placeholder="Email">
+        <input type="email" name="Email" id="Email" placeholder="Email" required>
         <br>
         <label for="Password">Password</label>
-        <input type="password" name="Password" id="Password">
+        <input type="password" name="Password" id="Password" required>
         <br>
         <input type="submit" name="submit" id="submit" value="LOGIN">
 
     </form>
-    
+    </div>
     <?php 
 
         if(isset($_POST["submit"]))
@@ -47,10 +57,6 @@
             mysqli_query($db, $sql);
 
             $result = mysqli_query($db, $sql2);
-
-            #while($row = mysqli_fetch_array($result)){
-            #    print_r($row);
-            #}
 
             if (($user = mysqli_fetch_array($result)) != null) 
             {
