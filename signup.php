@@ -33,7 +33,7 @@
         <label for="Password">Password</label>
         <input type="password" name="Password" id="Password" required>
         <br>
-        <input type="submit" name="submit" id="submit" value="LOGIN">
+        <input type="submit" name="submit" id="submit" value="SIGN UP">
 
     </form>
     </div>
