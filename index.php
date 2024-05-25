@@ -93,10 +93,12 @@
                 </div>
                 <div class="hmp_pic1_and_searchbar">
                     <img id="hmp_pic1" src="pictures/hmp_pasta.png" alt="big picture of two forks holding pasta">
-                    <form action="index.php" method="post">
-                        <input type="search" name="searchbar" id="hmp_searchbar" placeholder="Gib hier den Namen eines Gerichts ein...">
-                        <input type="submit" name="submit" value="Suchen">
-                    </form>
+                    <form action="index.php" method="post" class="search-bar">
+                        <input type="search" name="searchbar" class="searchbar" placeholder="Search ...">
+                        <button type="submit" name="submit" value="Suchen" class="search-btn">
+                            
+                        </button>
+                    </form> 
                     
             </div>
             
