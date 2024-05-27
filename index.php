@@ -83,28 +83,57 @@
     
     <!--Food-Boxes start here-->
 
+        
     
     
-    <div class="homepage_container_fluid">
-        <div class="homepage_container_list">
             <div class="homepage_search">
                 
                 
-                </div>
-                <div class="hmp_pic1_and_searchbar">
-                    <img id="hmp_pic1" src="pictures/hmp_pasta.png" alt="big picture of two forks holding pasta">
-                    <form action="index.php" method="post" class="search-bar">
-                        <input type="search" name="searchbar" class="searchbar" placeholder="Search ...">
-                        <button type="submit" name="submit" value="Suchen" class="search-btn">
-                            
-                        </button>
-                    </form> 
-                    
             </div>
-            
+                
 
-        </div>
-    </div>
+                <table class="hmp_foods">
+
+                    <tr>
+                        <td class="hmp_empty">Dies ist ein Platzhaltertext.............</td>
+                        <td colspan="4">
+                            <div class="hmp_pic1_and_searchbar">
+                                <img id="hmp_pic1" src="pictures/hmp_pasta.png" alt="big picture of two forks holding pasta">
+                            <form action="index.php" method="post" class="search-bar">
+                                <input type="search" name="searchbar" class="searchbar" placeholder="Search ...">
+                                <button type="submit" name="submit" value="Suchen" class="search-btn"></button>
+                            </form>  
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="hmp_empty">Dies ist ein Platzhaltertext.............</td>
+                        <td class="hmp_empty">Dies ist ein Platzhaltertext.............</td>
+                        <td class="hmp_empty">Dies ist ein Platzhaltertext.............</td>
+                        <td class="hmp_empty">Dies ist ein Platzhaltertext.............</td>
+                    </tr>
+                    <tr>
+                        <td class="hmp_empty">Dies ist ein Platzhaltertext.............</td>
+                        <td class="hmp_empty">Dies ist ein Platzhaltertext.............</td>
+                        <td class="hmp_empty">Dies ist ein Platzhaltertext.............</td>
+                        <td class="hmp_empty">Dies ist ein Platzhaltertext.............</td>
+                    </tr>
+                    <tr>
+                        <td class="hmp_empty">Dies ist ein Platzhaltertext.............</td>
+                        <td><img id="hmp_table_cburger" src="pictures/hmp_burger.jpg" alt="cheeseburger"></td>
+                        <td class="hmp_empty">Dies ist ein Platzhaltertext.............</td>
+                        <td><img id="hmp_table_frice" src="pictures/hmp_fried-rice.jpg" alt="frid rice"></td>
+                        <td class="hmp_empty">Dies ist ein Platzhaltertext.............</td>
+                        
+                    </tr>
+                    <tr id="backgroundtest">
+                    <td class="hmp_empty"></td>
+                        <th id="cheesertest">Cheeseburger</th>
+                    </tr>
+                </table>    
+
+        
+    
 
     <div id="errorMsges">
         <?php
