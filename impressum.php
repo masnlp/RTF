@@ -41,7 +41,7 @@
             </div>
         </div>
 
-        <div id="bar">
+        <div class="bar">
             
         </div>
     </header>
@@ -97,5 +97,8 @@
     </div>
     </div>
 
+    <div class="bar">
+            
+    </div>
 </body>
 </html>
