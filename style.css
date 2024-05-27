@@ -30,19 +30,18 @@ body{
   
   }
   .search-bar input {
-    font-size: 2rem;
+    font-size: 3rem;
     padding: 0rem;
     outline: 0;
     border: 0;
     background-color: transparent;
-    color: #dadada;
+    color: #8a8282;
   
   }
-  
-  .search-bar input::placeholder {
-    color: #000000;
-  
-  }
+ 
+  ::placeholder {
+    text-align: center; 
+ }
   .search-btn {
     background-color: transparent;
     border: 0;
@@ -59,9 +58,6 @@ body{
       display: none;
     }
   }
-
-
-
 #hmp_pic1{
     width: 100%;
     top: 0;
@@ -71,7 +67,6 @@ body{
     position: absolute;
 }
 .searchbar{
-    color: black;
     background-color: transparent;
     position: fixed;
     z-index: -2;
@@ -79,11 +74,7 @@ body{
     top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
-}
-.hmp_pic1_and_searchbar{
-    
-    width: 100%;
-    height: 30%;
+    height: 100px;
 }
 .hmp_login{
     position: fixed;
@@ -135,4 +126,36 @@ a:active {
 
 #contentoverlay{
     background-color: blue;
+}
+
+#hmp_table_cburger{
+  width: 300px;
+  object-fit: scale-down;
+    z-index: 3;
+}
+#hmp_table_frice{
+  width: 300px;
+    z-index: 3;
+}
+
+.hmp_foods{
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 180px;
+
+}
+
+#cheesertest{
+  z-index: 10;
+  color: greenyellow;
+  font-size: larger;
+}
+
+#backgroundtest{
+  background-color: #000000;
+}
+.hmp_empty{
+  z-index: 10;
+  visibility: hidden;
+  font-size: larger;
 }
