@@ -8,27 +8,37 @@ body{
     background-color: #b49082;
 }
 
+#table_search{
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 78px;
+}
 
 .search-bar {
- /* position: fixed;
-  bottom: 0;
-  right: 50px;
-  width: 300px;  */
-  position: sticky;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  /*float: left;*/
+  display: inline-block;
+  margin-top: 800px;
+  margin-left: -250px;
+  z-index: 10;
+  width: 500px;
     max-width: 80rem;
-    width: 55%;
     display: grid;
     grid-template-columns: 2fr 5rem;
     align-items: center;
     background-color: rgba(231, 218, 222, 1);
     padding: 1rem 2rem;
     border-radius: 4rem;
-    
+    z-index: 10;
   
   }
+  .searchbar{
+    display: flex;
+    background-color: transparent;
+    z-index: 10;
+    width: 265px;
+    
+  }
+
   .search-bar input {
     font-size: 3rem;
     padding: 0rem;
@@ -36,11 +46,12 @@ body{
     border: 0;
     background-color: transparent;
     color: #8a8282;
-  
+    z-index: 10;
   }
  
   ::placeholder {
     text-align: center; 
+    z-index: 10;
  }
   .search-btn {
     background-color: transparent;
@@ -98,6 +109,22 @@ body{
     margin: 10px;
     z-index: 2;
 }
+.hmp_home{
+  position: fixed;
+    top: 20px;
+    left: 20px;
+    margin: 10px;
+    z-index: 2;
+}
+.hmp_bestenliste{
+  position: fixed;
+    top: 20px;
+    left: 115px;
+    margin: 10px;
+    z-index: 2;
+}
+
+
 a:link {
     color: #fff2f2c8;
     background-color: transparent;
@@ -121,6 +148,7 @@ a:active {
 
 #hmp_food_descrip{
     color: aliceblue;
+    font-size: 96%;
 }
 
 
@@ -141,14 +169,15 @@ a:active {
 .hmp_foods{
   margin-left: auto;
   margin-right: auto;
-  padding-top: 180px;
+  padding-top: 78px;
 
 }
-
-#cheesertest{
-  z-index: 10;
-  color: greenyellow;
-  font-size: larger;
+.hmp_foods_top{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
+  width: 100%;
+  height: 90%;
 }
 
 #backgroundtest{
@@ -158,4 +187,41 @@ a:active {
   z-index: 10;
   visibility: hidden;
   font-size: larger;
+}
+
+.text_in_table{
+  font-size: x-large;
+}
+.like_button{
+  background-color: #c2fbd7;
+  border-radius: 100px;
+  box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+  color: green;
+  cursor: pointer;
+  display: inline-block;
+  font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+  padding: 7px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.like_button:hover {
+  box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+  transform: scale(1.05) rotate(-1deg);
+}
+
+footer{
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 40px;
+}
+
+td{
+  text-align: center;
 }
