@@ -79,7 +79,7 @@
             <tr>
                 <td class='hmp_empty'>Dies ist ein Platzhaltertext.............</td>
                 <td class='text_in_table'><div id='hmp_food_descrip'>$foodName: $likes Like/s </div><br></td>
-                <td><img src=\"$pathToPic\" alt=\"Pic of $foodName\" style=\"width: 400px;\"></td>
+                <td><img src=\"$pathToPic\" alt=\"Pic of $foodName\" style=\"width: 400px; border-radius:15px;\"></td>
                 <td class='hmp_empty'>Dies ist ein Platzhaltertext.............</td>
                 
             </tr>
