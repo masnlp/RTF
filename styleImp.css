@@ -24,6 +24,13 @@ h1 {
     background-color: #5b4041;
 }
 
+#barLog {
+    margin: 0;
+    padding: 0;
+    height: 20px;
+    background-color: #926a6a;
+}
+
 #centered {
     display: flex;
     justify-content: center;
@@ -53,16 +60,9 @@ h1 {
     font-size: x-large;
 }
 
-.bar {
+#bar {
     margin: 0;
     margin-top: 60px;
-    padding: 0;
-    height: 20px;
-    background-color: #926a6a;
-}
-
-#barLog {
-    margin: 0;
     padding: 0;
     height: 20px;
     background-color: #926a6a;
@@ -130,4 +130,14 @@ h2{
 p{
     font-size: 20px;
     margin-left: 50px;
+}
+
+.hmp_empty{
+    z-index: 10;
+    visibility: hidden;
+    font-size: larger;
+}
+
+.text_in_table{
+    font-size: x-large;
 }
