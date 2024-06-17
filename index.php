@@ -8,16 +8,56 @@
             $pathToPic = $row['PachToPic'];
             $likes     = $row[  'Likes'  ];
 
-            echo "<div id='hmp_food_descrip'>" . $foodName. " ". " from: ". $row['Nationality'] . "</div>";
+            echo "<table>
+            
+            <tr>
+                <td class='hmp_empty'>Dies ist ein Platzhaltertext.............</td>
+                <td class='hmp_empty'>Dies ist ein Platzhaltertext.............</td>
+                <td class='hmp_empty'>Dies ist ein Platzhaltertext.............</td>
+                <td class='hmp_empty'>Dies ist ein Platzhaltertext.............</td>
+            </tr>
+            <tr class='hmp_foods'>
+                <td class='hmp_empty'>Dies ist ein Platzhaltertext.............</td>
+                <td class='hmp_empty'>Dies ist ein Platzhaltertext.............</td>
+                <td class='hmp_empty'>Dies ist ein Platzhaltertext.............</td>
+                <td class='hmp_empty'>Dies ist ein Platzhaltertext.............</td>
+            </tr>
 
-            echo '<div>';
+
+            <tr>
+                <td class='hmp_empty'>Dies ist ein Platzhaltertext.............</td>
+                <td class='text_in_table'><div id='hmp_food_descrip'>$foodName from: $row[Nationality] </div><br>
+                echo '<div>'; 
+            echo '    <form action='like.php' method='post'>';
+            echo '        <input type='number' name='foodID' id='foodID' value=''.$foodID.'' hidden>';
+    
+            echo '        <input type='submit' class='like_button' value='like'> '. $likes;
+            echo '    </form>';
+            echo '</div>';</td>
+                
+                <td><img src=\"$pathToPic\" alt=\"Pic of $foodName\" style=\"width: 400px; border-radius:15px;\"></td>
+                <td class='hmp_empty'>Dies ist ein Platzhaltertext.............</td>
+                
+            </tr>
+
+            
+            
+        </table>";
+
+
+            
+           /* echo "<div id='hmp_food_descrip'>" . $foodName. " ". " from: ". $row['Nationality'] . "</div>";
+
+            echo '<div>'; 
             echo '    <form action="like.php" method="post">';
             echo '        <input type="number" name="foodID" id="foodID" value="'.$foodID.'" hidden>';
     
             echo '        <input type="submit" value="like"> '. $likes;
             echo '    </form>';
-            echo "<img src=\"$pathToPic\" alt=\"Pic of $foodName\" style=\"width: 100px; height: 100px;\">";
             echo '</div>';
+            
+            echo "<img src=\"$pathToPic\" alt=\"Pic of $foodName\" style=\"width: 100px; height: 100px;\">";*/
+            
         }
     }
 ?>
@@ -32,6 +72,7 @@
     <link rel="stylesheet" href="style.css">
     <title>Homepage</title>
 
+    
 </head>
 <body>
         <div id="homepage_sign">
@@ -45,13 +86,35 @@
                 echo "<a href='login.php' class='hmp_login'>LOG IN</a>";
                 echo "<a href='signup.php' class='hmp_signup'>SIGN UP</a>";
             }
-            
+            echo "<a href='index.php' class='hmp_home'>GERICHTE</a>";
+            echo "<a href='bestenliste.php' class='hmp_bestenliste'>BESTENLISTE</a>";
         ?>
+        
         
         </div>
     
+        <table id="table_search">
+        <tr>
+                <td class='hmp_empty'>Dies ist ein Platzhaltertext.............</td>
+                <td>
+                        <img id='hmp_pic1' src='pictures/hmp_pasta.png' alt='big picture of two forks holding pasta'>
+                        
+                </td>
+                    <div id="hmp_searchbar_move">
+                        <td colspan='4'>
+                            <form action='index.php' method='post' class='search-bar'>
+                                <input type='search' name='searchbar' class='searchbar' placeholder='Search ...'>
+                                <button type='submit' name='submit' value='Suchen' class='search-btn'></button>
+                            </form> 
+                    </td>
+                </div>
+                
+            </tr>
+        </table>
     
 
+
+        
     <!--Picture1
         also all the foos from the table foos
     -->
@@ -75,62 +138,16 @@
             $result = mysqli_query($db, $sql);
         }
         mysqli_close(  $db  );
+        echo '<div class="hmp_foods_top">';
         showItems   ($result);
+        echo '</div>';
     ?>
-    
-
-
-    
-    <!--Food-Boxes start here-->
-
-        
-    
-    
-            <div class="homepage_search">
-                
-                
-            </div>
                 
 
-                <table class="hmp_foods">
-
-                    <tr>
-                        <td class="hmp_empty">Dies ist ein Platzhaltertext.............</td>
-                        <td colspan="4">
-                            <div class="hmp_pic1_and_searchbar">
-                                <img id="hmp_pic1" src="pictures/hmp_pasta.png" alt="big picture of two forks holding pasta">
-                            <form action="index.php" method="post" class="search-bar">
-                                <input type="search" name="searchbar" class="searchbar" placeholder="Search ...">
-                                <button type="submit" name="submit" value="Suchen" class="search-btn"></button>
-                            </form>  
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="hmp_empty">Dies ist ein Platzhaltertext.............</td>
-                        <td class="hmp_empty">Dies ist ein Platzhaltertext.............</td>
-                        <td class="hmp_empty">Dies ist ein Platzhaltertext.............</td>
-                        <td class="hmp_empty">Dies ist ein Platzhaltertext.............</td>
-                    </tr>
-                    <tr>
-                        <td class="hmp_empty">Dies ist ein Platzhaltertext.............</td>
-                        <td class="hmp_empty">Dies ist ein Platzhaltertext.............</td>
-                        <td class="hmp_empty">Dies ist ein Platzhaltertext.............</td>
-                        <td class="hmp_empty">Dies ist ein Platzhaltertext.............</td>
-                    </tr>
-                    <tr>
-                        <td class="hmp_empty">Dies ist ein Platzhaltertext.............</td>
-                        <td><img id="hmp_table_cburger" src="pictures/hmp_burger.jpg" alt="cheeseburger"></td>
-                        <td class="hmp_empty">Dies ist ein Platzhaltertext.............</td>
-                        <td><img id="hmp_table_frice" src="pictures/hmp_fried-rice.jpg" alt="frid rice"></td>
-                        <td class="hmp_empty">Dies ist ein Platzhaltertext.............</td>
-                        
-                    </tr>
-                    <tr id="backgroundtest">
-                    <td class="hmp_empty"></td>
-                        <th id="cheesertest">Cheeseburger</th>
-                    </tr>
-                </table>    
+    <footer>
+    <a href='impressum.php'>PRIVACY & LEGAL</a>;
+    <a href='impressum.php'>CONTACT</a>;
+    </footer>  
 
         
     
