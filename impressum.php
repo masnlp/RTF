@@ -17,6 +17,7 @@
     <header id="header">
         <div id="heading">
             <h1>RateTheFood</h1>
+           
 
             <div id="loggin">
             <?php 
@@ -26,9 +27,11 @@
                 $user = $_SESSION["user"]["Username"];
 
                 echo "<a href='logout.php'>SIGN OUT</a>";
+                echo "<a href='index.php'>HOME</a>";
             } else {
                 echo "<a href='login.php' style='margin-right: 10px;'>LOG IN </a>";
                 echo "<a href='signup.php'>SIGN UP</a>";
+                
             }
 
             ?>
@@ -41,7 +44,7 @@
             </div>
         </div>
 
-        <div class="bar">
+        <div id="bar">
             
         </div>
     </header>
@@ -97,8 +100,5 @@
     </div>
     </div>
 
-    <div class="bar">
-            
-    </div>
 </body>
 </html>
