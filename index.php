@@ -27,13 +27,13 @@
             <tr>
                 <td class='hmp_empty'>Dies ist ein Platzhaltertext.............</td>
                 <td class='text_in_table'><div id='hmp_food_descrip'>$foodName from: $row[Nationality] </div><br>
-                echo '<div>'; 
-            echo '    <form action='like.php' method='post'>';
-            echo '        <input type='number' name='foodID' id='foodID' value=''.$foodID.'' hidden>';
+                <div>
+                <form action='like.php' method='post'>
+                    <input type='number' name='foodID' id='foodID' value=''.$foodID.'' hidden>
     
-            echo '        <input type='submit' class='like_button' value='like'> '. $likes;
-            echo '    </form>';
-            echo '</div>';</td>
+                    <input type='submit' class='like_button' value='like'> <div style=\"color: #5b4041\">Likes: $likes</div>
+                </form>
+            </div></td>
                 
                 <td><img src=\"$pathToPic\" alt=\"Pic of $foodName\" style=\"width: 400px; border-radius:15px;\"></td>
                 <td class='hmp_empty'>Dies ist ein Platzhaltertext.............</td>

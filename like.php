@@ -34,7 +34,7 @@
     
     if(!$alreadyLiked)
     {
-        $sql    = "INSERT INTO `likedFood` (`FoodID`, `UserID`) VALUES ($foodID, $userID)";
+        $sql    = "INSERT INTO likedFood (FoodID, UserID) VALUES ($foodID, $userID)";
         $update = "UPDATE Foos SET Likes = ($likes) + 1 WHERE FoodID = $foodID";
 
         mysqli_query($db, $sql);
